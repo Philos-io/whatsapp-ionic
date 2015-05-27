@@ -1,0 +1,15 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-header">
+    <h1 class="title">Recents</h1>
+    <button class="button button-clear" ng-click="edit()">Edit</button>
+  </ion-header-bar>
+  <ion-content>
+    <ion-list show-delete="showDelete">
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="contact in contacts | limitTo:2 " type="item-text-wrap">
+        <img ng-src="{{contact.face}}">
+        <h2>{{contact.name}}</h2>
+        <ion-delete-button class="ion-minus-circled" ng-click="remove(contact)"></ion-delete-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

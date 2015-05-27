@@ -1,0 +1,19 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-header">
+    <button class="button button-clear" ng-click="edit()">Edit</button>
+    <h1 class="title">Chats</h1>
+    <button class="button button-icon icon ion-edit" ng-click="openModal()"></button>
+  </ion-header-bar>
+  
+  <ion-content>
+    <ion-list show-delete="showDelete">
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+        <img ng-src="{{chat.face}}">
+        <h2>{{chat.name}}</h2>
+        <p>{{chat.lastText}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+        <ion-delete-button class="ion-minus-circled" ng-click="remove(chat)"></ion-delete-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

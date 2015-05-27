@@ -1,0 +1,15 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-stable">
+    <button class="button button-icon icon ion-ios-arrow-left" ng-click="goBack()"></button>
+    <h1 class="title">
+      {{chat.name}}
+    </h1>
+    <button class="button button-icon icon ion-plus"></button>
+  </ion-header-bar>
+  <ion-content class="padding">
+    <img ng-src="{{chat.face}}" style="width: 64px; height: 64px">
+    <p>
+      {{chat.lastText}}
+    </p>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,6 @@
+/* Empty. Add your own CSS if you like */
+
+input[type='search']{
+  width: 100%;
+  background-color: #eee;
+}

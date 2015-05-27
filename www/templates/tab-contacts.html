@@ -1,0 +1,29 @@
+
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-header">
+      <h1 class="title">All Contacts</h1>
+      <button class="button button-icon icon ion-plus" ng-click="openModal()"></button>
+  </ion-header-bar>
+
+
+
+  <ion-content has-subheader="true">
+    <ion-list>
+      <ion-item>
+        <div class="header-bar">
+          <label class="item-input-wrapper">
+            <i class="icon ion-ios-search placeholder-icon"></i>
+            <input type="search" placeholder="Search" ng-model="contactFilter">
+          </label>
+        </div>
+      </ion-item>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="contact in contacts | filter:contactFilter" type="item-text-wrap" href="#/tab/chats/{{contact.id}}">
+        <img ng-src="{{contact.face}}">
+        <h2>{{contact.name}}</h2>
+        <ion-option-button class="button-assertive" ng-click="remove(contact)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
